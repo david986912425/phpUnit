@@ -14,7 +14,7 @@ class OperationsTest extends TestCase
 
     public function testAddWithTwoValues()
     {
-        $this->assertEquals(7, $this->op->add(2, 5));
+        $this->assertEquals(13, $this->op->add(7, 6));
     }
 
     public function testAddWithNullValues()
@@ -49,6 +49,6 @@ class OperationsTest extends TestCase
     public function testDivideBetweenZero()
     {
         $this->expectException(DivisionByZeroError::class);
-        $this->op->divide(5, 0);
+        $this->op->divide(0, 0);
     }
 }
